@@ -1,12 +1,14 @@
-# Session ID - Session Title
+# AI161 - Hands-on: Benchmark, evaluate, and optimize prompts across models
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2025 session called Session ID - Session Title.  
+This repository contains the material for the SAP TechEd 2025 session called AI161 - Hands-on: Benchmark, evaluate, and optimize prompts across models.  
 
 ## Overview
 
-This session introduces attendees to...
+This session introduces attendees to our new AI Core services for prompt optimizations and evaluation. 
+
+Get hands-on experience with the prompt editor, registry, and benchmarking tools available from the generative AI hub capability in SAP AI Core. You can compare models, evaluate performance, and optimize prompts. Learn how to build resilient, model-agnostic AI workflows and avoid vendor lock-in.
 
 ## Requirements
 
