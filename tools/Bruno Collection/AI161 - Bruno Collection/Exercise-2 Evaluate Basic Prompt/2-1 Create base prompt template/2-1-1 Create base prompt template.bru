@@ -1,12 +1,12 @@
 meta {
-  name: 2-2 Check base prompt template
+  name: 2-1-1 Create base prompt template
   type: http
-  seq: 2
+  seq: 1
 }
 
-get {
-  url: {{AI_API_URL}}/v2/lm/promptTemplates/{{promptTemplateID}}
-  body: none
+post {
+  url: {{AI_API_URL}}/v2/lm/promptTemplates
+  body: json
   auth: bearer
 }
 
@@ -39,5 +39,15 @@ body:json {
         }
       ]
     }
+  }
+}
+
+script:post-response {
+  let data = res.getBody();
+  if (data.id) {
+    let templateID = data.id;
+    // https://docs.usebruno.com/testing/script/javascript-reference#setenvvar
+    bru.setEnvVar("promptTemplateID", templateID);
+    console.info("Set promptTemplateID to:", templateID);
   }
 }
