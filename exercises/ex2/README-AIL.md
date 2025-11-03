@@ -129,9 +129,9 @@ After the file has finished uploading click on `Add` to create the artifact.
 
 13. Fill in the remaining information for the dataset artifact as follows:
 - File Type: `JSON`
-- Dataset File: `/facility-eval-data.json`
+- Dataset File: `/facility_eval_data.json`
 
-14. Now that we have filled out all require Test input information we can move on to selecting evaluation metrics. Click `Next` to proceed to the metrics selection.
+14. Now that we have filled out all required Test input information we can move on to selecting evaluation metrics. Click `Next` to proceed to the metrics selection.
 <br>![](/exercises/ex2/images/ail02-22.png)
 
 15. Our use-case requests the LLM to follow instructions to extract structured information from unstructured text. Therefore, we will select metrics that measure instruction following and correctness of the answers.
@@ -139,12 +139,41 @@ In the metrics selection view, choose the following metrics by clicking on them:
 - Pointwise correctness
 - Pointwise accuracy
 - Pointwise instruction following
+Then click `Next` to proceed to the next step.
 <br>![](/exercises/ex2/images/ail02-23.png)
+
+16. In the next step we can configure additional evaluation parameters. We can choose the number of repetitions for the evaluation. We can define a mapping between prompt and dataset variables in case these are mismatched. And we can define Tags to be associated with the evaluation run.
+For this exercise, we will leave everything at the default values. Click `Review` to proceed to the next step.
+<br>![](/exercises/ex2/images/ail02-24.png)
 
 ### 2-3-4 Start the Evaluation
 
+1. Now Review your configuration and click on `Create` to start the evaluation.
+<br>![](/exercises/ex2/images/ail02-25.png)
+You should now see a confirmation that the evaluation has been created successfully.
+
+## Exercise 2.4 Check the evaluation results
+
+After starting the evaluation it will take some time until the evaluation is finished. You can monitor the progress of the evaluation in the view that opened after clicking on `Create`.
+
+### 2-4-1 Monitor the status of your evaluation
+1. Click the refresh icon in the top right to refresh the view.
+<br>![](/exercises/ex2/images/ail02-26.png)
+
+2. Check if the status of the evaluation has change to running - indicating that the evaluation process has started.
+
+3. Periodically click the refresh icon to update the status of the evaluation run. Once the status has changed to `Completed` the evaluation is finished.
+
+### 2-4-2 Review the evaluation results
+
+1. You can now find the finished evaluation and your results in the `Optimization` view. Open the `Optimization` view from the side menu. Find your evaluation and click on it o view the results.
+<br>![](/exercises/ex2/images/ail02-27.png)
+
+2. In the evaluation detail view you can now see the results of the evaluation. Check the scores for the different metrics we have selected.
+<br>![](/exercises/ex2/images/ail02-28.png)
+
 ## Summary
 
-You've now ...
+You have now evaluated the base prompt using the provided evaluation data set and the AI Core evaluation service. We can use these scores later to compare them with the results of the optimized prompt. Now let's continue to the next exercise where we will optimize the base prompt.
 
-Continue to - [Exercise 3 - Exercise 3 ](../ex3/README-AIL.md)
+Continue to - [Exercise 3 - Optimize the Prompt](../ex3/README-AIL.md)
