@@ -1,8 +1,8 @@
-# Exercise 2 - Exercise 2 Description
+# Exercise 2 - Evaluate the original prompt
 
 In this exercise, we will evaluate our basic prompt using the evaluation data set provided and the AI Core evaluation service.
 
-## Exercise 2.1 Create a template for the bas prompt
+## Exercise 2.1 Create a template for the base prompt
 
 After completing these steps you will have created and stored a prompt template, and evaluated it with a set of metrics. 
 
@@ -67,7 +67,13 @@ In the UI uploading the data set can be done as part of the evaluation configura
 
 Now that we have successfully prepared a prompt template, we can configure and run an evaluation with the AI Core evaluation service. 
 
-### 2-3-1 Configure your Evaluation
+### 2-3-1 Check available models
+In the UI the list of models can be reviewed and filtered as part of the evaluation configuration. So we will continue with the next step for now.
+
+### 2-3-2 Check available metrics
+In the UI the list of available metrics can be reviewed and filtered as part of the evaluation configuration. So we will continue with the next step for now.
+
+### 2-3-3 Configure your Evaluation
 1. Open the `Optimization` view by clicking on it in the side menu.
 You should see a list of optimization and evaluation runs.
 
@@ -86,10 +92,11 @@ A Dialog to chose between `Optimization` and `Evaluation` opens.
 You can use the filters to find your prompt template more easily.
 <br>![](/exercises/ex2/images/ail02-14.png)
 
+### 2-3-2 
 6. Next we need to select the model which we want to evaluate. Click on the selection icon to open the model selection.
 <br>![](/exercises/ex2/images/ail02-15.png)
 
-7. Browse the available models and select the model you want to use for this exercise. Normally, you can configure multiple models to compare them for your use-case. For this hands-on session let's coordinate chosing different models across groups and chose one model each. This allows us to distribute the workload of the hands-on evenly across different models and later compare them as we are all using the same user. 
+7. Browse the available models and select the model you want to use for this exercise. Normally, you can configure multiple models to compare them for your use-case. For this hands-on session let's coordinate choosing different models across groups and chose one model each. This allows us to distribute the workload of the hands-on evenly across different models and later compare them as we are all using the same user. 
 Click on the model that was chosen for your group and then click `Select`.
 <br>![](/exercises/ex2/images/ail02-16.png)
 
@@ -113,25 +120,31 @@ Click on the model that was chosen for your group and then click `Select`.
 Then open the file selection by clicking on the browse icon.
 <br>![](/exercises/ex2/images/ail02-19.png)
 
+Now find the `facility_eval_data.json` file located in the `data/datasets` folder and select it.
+After the file has finished uploading click on `Add` to create the artifact.
+<br>![](/exercises/ex2/images/ail02-20.png)
 
+12. Now select the newly created artifact from the list by clicking on it and then clicking `Select`.
+<br>![](/exercises/ex2/images/ail02-21.png) 
 
+13. Fill in the remaining information for the dataset artifact as follows:
+- File Type: `JSON`
+- Dataset File: `/facility-eval-data.json`
 
+14. Now that we have filled out all require Test input information we can move on to selecting evaluation metrics. Click `Next` to proceed to the metrics selection.
+<br>![](/exercises/ex2/images/ail02-22.png)
 
-### 2-3-1 Check available models
-1. First let's explore some available models for the evaluation. Open the `Model Library` view by clicking on it in the side menu.
-2. Browse the available models. 
-3. Discuss with the group who will evaluate which model to distribute the workload evenly.
-
-### 2-3-2 Check avialable metrics
-1.
-
-### 2-3-3 Configure your Evaluation
-1. Open request 2-3-3 Configure the Evaluation in the Bruno API client.
+15. Our use-case requests the LLM to follow instructions to extract structured information from unstructured text. Therefore, we will select metrics that measure instruction following and correctness of the answers.
+In the metrics selection view, choose the following metrics by clicking on them:
+- Pointwise correctness
+- Pointwise accuracy
+- Pointwise instruction following
+<br>![](/exercises/ex2/images/ail02-23.png)
 
 ### 2-3-4 Start the Evaluation
 
 ## Summary
 
-You ha've now ...
+You've now ...
 
-Continue to - [Exercise 3 - Excercise 3 ](../ex3/README.md)
+Continue to - [Exercise 3 - Exercise 3 ](../ex3/README-AIL.md)
