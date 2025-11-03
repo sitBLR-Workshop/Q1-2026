@@ -1,4 +1,4 @@
-# Exercise 1 - Exercise 1 Description
+# Exercise 1 - Setup
 
 In this exercise, we will access and setup SAP AI Launchpad to work with through the following exercises.
 
