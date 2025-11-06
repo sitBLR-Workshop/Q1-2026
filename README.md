@@ -12,12 +12,7 @@ Get hands-on experience with the prompt editor, registry, and benchmarking tools
 
 ## Requirements
 
-The exercise can be completed with different tools of choice:
-- SAP AI Launchpad (web-based UI)
-- Bruno API client (desktop application)
-- Jupyter Notebook / VSCode (local development environment)
-
-Depending on your choice requirements vary and are described in the respective exercise readme files.
+The exercise is designed to be done in the SAP AI Launchpad. For the Hands-on session it is designed for we have provided an SAP AI Launchpad and a technical user to login. If you want to repeat this tutorial outside of the hands-on session you will require your own AI Launchpad instance.
 
 ## Exercises
 

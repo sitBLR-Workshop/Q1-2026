@@ -1,6 +1,6 @@
 # Getting started
 
-In this exercise, you will chose your mode of interaction with the AI Core services. You can either use our UI the SAP AI Launchpad, the Bruno API client or our Jupyter Notebook and VSCode to work through the following exercises.
+In this exercise, you will chose your mode of interaction with the AI Core services. We recommend to use our UI the SAP AI Launchpad to work through the following exercises.
 
 Either way you will experience how to evaluate and optimize prompts using the AI Core services for prompt optimization and evaluation based on a demo scenario.
 
@@ -30,11 +30,10 @@ Now that you have familiarized yourself with the scenario, prompt and data sets,
 
 ### Choose how you want to work in this tutorial
 
+We recommend to use the AI launchpad for a more guided experience. If you are more familiar with API clients or coding you can also use the Bruno API client.
+
 1.	AI Launchpad - follow the instructions in the following readme to use the SAP AI Launchpad UI for working through the exercises.
 <br>- Continue to - [Exercise 1 - Setup AI Launchpad](../ex1/README-AIL.md)  
 
 2.	Bruno API client - Open the Bruno API client and follow the instructions in the following readme to use the Bruno API client for working through the exercises.
 <br>- Continue to - [Exercise 1 - Setup Bruno API Client](../ex1/README-BRUNO.md)
-
-3.  Jupyter Notebook / VSCode - Open VS Code and follow the instructions in the following readme to use Jupyter Notebook or VSCode for working through the exercises.
-<br>- Continue to - [Exercise 1 - Setup Jupyter Notebook / VSCode](../ex1/README-IPYNB.md)
