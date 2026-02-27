@@ -1,4 +1,4 @@
-name: Merge Multiple Repositories New
+name: Merge Multiple Repositories
 
 on:
   workflow_dispatch:
