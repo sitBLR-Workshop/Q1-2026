@@ -1,8 +1,8 @@
-# AI161 - Hands-on: Benchmark, evaluate, and optimize prompts across models
+# Hands-on: Benchmark, evaluate, and optimize prompts across models
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2025 session called AI161 - Hands-on: Benchmark, evaluate, and optimize prompts across models.  
+This repository contains the material for the Hands-on: Benchmark, evaluate, and optimize prompts across models.  
 
 ## Overview
 
