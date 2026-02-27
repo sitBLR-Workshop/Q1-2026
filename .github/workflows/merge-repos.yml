@@ -1,0 +1,72 @@
+name: Merge Multiple Repositories New
+
+on:
+  workflow_dispatch:
+    inputs:
+      repos:
+        description: "Comma-separated: folderName=repoURL"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout target repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+      - name: Merge repositories as subtrees
+        run: |
+          INPUT="${{ github.event.inputs.repos }}"
+
+          echo "Processing input: $INPUT"
+
+          # Split input by comma
+          IFS=',' read -ra PAIRS <<< "$INPUT"
+
+          for PAIR in "${PAIRS[@]}"; do
+            PAIR=$(echo "$PAIR" | xargs)
+
+            # Extract folder and repo
+            FOLDER=$(echo "$PAIR" | cut -d '=' -f1 | xargs)
+            REPO=$(echo "$PAIR" | cut -d '=' -f2- | xargs)
+
+            # Validate
+            if [ -z "$FOLDER" ] || [ -z "$REPO" ]; then
+              echo "Skipping invalid entry: $PAIR"
+              continue
+            fi
+
+            # Prevent overwriting existing folder
+            if [ -d "$FOLDER" ]; then
+              echo "Folder $FOLDER already exists. Skipping."
+              continue
+            fi
+
+            echo "Merging $REPO into folder $FOLDER"
+
+            git remote add "$FOLDER" "$REPO"
+            git fetch "$FOLDER"
+
+            # Change 'main' if your source repos use another branch
+            git subtree add --prefix="$FOLDER" "$FOLDER" main
+
+            git remote remove "$FOLDER"
+          done
+
+      - name: Push changes
+        run: |
+          git push origin main
+
+
+
